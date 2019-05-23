@@ -12,7 +12,7 @@
 		var e = "BITHUMB:"; //KORBIT:
 		var d = new Array("1","5","30","60","D","W","M");
 		
-		var c = fetch('list.txt').then(function(response) {
+		var c = fetch('coin/list.txt').then(function(response) {
 			return response.text()
 		}).then(function (text) {
 			console.log(text);
