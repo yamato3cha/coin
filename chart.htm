@@ -15,8 +15,9 @@
 		var c = fetch("https://yamato3cha.github.io/coin/list.txt").then(function(response) {
 			return response.text()
 		}).then(function (text) {			
-			text.split("/\r|\n/");
+			text.split("/\r?\n/");
 		})
+		console.log("A");
 		console.log(c.length);
 		console.log(c);
 		/*
