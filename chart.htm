@@ -11,11 +11,11 @@
 		var m = "KRW";
 		var e = "BITHUMB:"; //KORBIT:
 		var d = new Array("1","5","30","60","D","W","M");
-		/*
+		
 		var c = fetch("https://yamato3cha.github.io/coin/list.txt").then(function(response) {
 			return response.text()
 		}).then(function (text) {			
-			text.split("/\r?\n/");
+			text.split("/\r\n|\n|\r/");
 		})
 		console.log("A");		
 		console.log(c.length);
@@ -23,7 +23,7 @@
 		for ( var z in c ) {
 			console.log(c[z])
 		}
-		*/
+		/*
 		var c = new Array();
 		c[0] = e + "BTC" + m;		    
 		c[1] = e + "ETH" + m;
@@ -35,7 +35,7 @@
 		c[7] = e + "ADA" + m;
 		c[8] = e + "TRX" + m;
 		c[9] = e + "XMR" + m;
-		
+		*/
 		function chart(w,h,c,d)
 		{
 			document.write("<table>");
