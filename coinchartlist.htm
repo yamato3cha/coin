@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<title>Coin Chart List</title>
+<head>
+	<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>	
+	<script type="text/javascript">		
+		var w = 420;
+		var h = 261;	
+		var d = new Array("D","W","M");
+		var c = new Array();
+		    c[0] = "KORBIT:BTCKRW";
+			c[1] = "BITHUMB:BTCKRW";
+		function chart(w,h,c,d)
+		{
+			document.write("<table>");
+			for(var i=0; i<c.length; i++)
+			{
+				document.write("<tr>");
+				for(var j=0; j<d.length; j++)
+				{
+					document.write("<td>");
+					document.write("<div id='" + c[i] + ":" + d[j] + "''>");
+					new TradingView.widget({
+					"width": w,
+					"height": h,
+					"symbol": c[i],
+					"interval": d[j],
+					"timezone": "Etc/UTC",
+					"theme": "Light",
+					"style": "1",
+					"locale": "kr",
+					"toolbar_bg": "#f1f3f6",
+					"enable_publishing": false,
+					"allow_symbol_change": true,
+					"container_id": c[i] + ":" + d[j]
+					});
+					document.write("</td>");
+				}				
+				document.write("</tr>");
+			}
+			document.write("</table>");
+		}
+		window.onload = chart(w,h,c,d);		
+	</script>	
+</head>
+<body>
+</body>
+</html>
