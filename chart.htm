@@ -4,26 +4,12 @@
 <title>Coin Chart List</title>
 <head>
 	<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-	<!--script type="text/javascript" src="coinchartlist.js"></script-->
 	<script type="text/javascript">		
 		var w = 420;
 		var h = 261;	
 		var m = "KRW";
 		var e = "BITHUMB:"; //KORBIT:
 		var d = new Array("1","5","30","60","D","W","M");
-		/*
-		var c = fetch("https://yamato3cha.github.io/coin/list.txt").then(function(response) {
-			return response.text()
-		}).then(function (text) {			
-			text.split("/\r\n|\n|\r/");
-		})
-		console.log("A");		
-		console.log(c.length);
-		console.log(c);
-		for ( var z in c ) {
-			console.log(c[z])
-		}
-		*/
 		var c = new Array();
 		c[0] = e + "BTC" + m;		    
 		c[1] = e + "ETH" + m;
