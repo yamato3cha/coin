@@ -3,23 +3,33 @@
 <meta charset="UTF-8">
 <title>Coin Chart List</title>
 <head>
-	<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>	
+	<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+	<!--script type="text/javascript" src="coinchartlist.js"></script-->
 	<script type="text/javascript">		
 		var w = 420;
 		var h = 261;	
+		var m = "KRW";
 		var e = "BITHUMB:"; //KORBIT:
 		var d = new Array("1","5","30","60","D","W","M");
+		
+		var c = fetch('coin.list').then(function(response) {
+			return response.text()
+		}).then(function (text) {
+			text.split('\n');
+		})
+		/*
 		var c = new Array();
-		c[0] = e + "BTCKRW";		    
-		c[1] = e + "ETHKRW";
-		c[2] = e + "XRPKRW";
-		c[3] = e + "BCHKRW";
-		c[4] = e + "LTCKRW";
-		c[5] = e + "EOSKRW";
-		c[6] = e + "XLMKRW";
-		c[7] = e + "ADAKRW";
-		c[8] = e + "TRXKRW";
-		c[9] = e + "XMRKRW";
+		c[0] = e + "BTC" + m;		    
+		c[1] = e + "ETH" + m;
+		c[2] = e + "XRP" + m;
+		c[3] = e + "BCH" + m;
+		c[4] = e + "LTC" + m;
+		c[5] = e + "EOS" + m;
+		c[6] = e + "XLM" + m;
+		c[7] = e + "ADA" + m;
+		c[8] = e + "TRX" + m;
+		c[9] = e + "XMR" + m;
+		*/
 		function chart(w,h,c,d)
 		{
 			document.write("<table>");
